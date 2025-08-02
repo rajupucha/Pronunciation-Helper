@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice to Text & Text to Voice Converter.</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="tts.css">
+</head>
+
+<body>
+<div class="head">
+    <h1 id="mainh1">PRONUNCIATION HELPER</h1>
+    <div class="main">
+        
+   
+<div class="voiceinator">
+    <h1>Text-To-Speech</h1>
+    <select name="voice" id="voices">
+      <option value="">Select A Voice</option>
+    </select>
+    <label for="rate">Rate:</label>
+    <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+    <label for="pitch">Pitch:</label>
+    <input name="pitch" type="range" min="0" max="2" step="0.1">
+    <textarea name="text" placeholder="Start typing..."></textarea>
+    <button id="stop">Stop</button>
+    <button id="speak">Speak</button>
+  </div>
+
+
+ 
+    <script src="tts.js"></script>
+  
+ <div class="container">
+    <h1>Speech-To-Text</h1>
+        
+        <label for="expectedText">Enter the text you want to speak:</label>
+        <textarea id="expectedText" placeholder="Type or paste the text you want to speak here..."></textarea>
+        
+        <button onclick="startListening()">Start Listening</button>
+        <button onclick="playSpoken()">Play Recognized Text</button>
+        
+        <div id="spokenDisplay">Your spoken text will appear here...</div>
+        
+        <div class="results">
+            <h3>Results</h3>
+            <div class="feedback">
+                Accuracy: <span id="accuracyScore">0</span>%
+                <div id="feedback"></div>
+            </div>
+            <h4>Mismatches:</h4>
+            <div id="mismatches">No mismatches yet</div>
+        </div>
+    </div>
+
+    <script src="new.js"></script>
+
+
+</html>
+
+
+
+</div>
+</div>
+
+    <script src="script2.js"></script>
+    <script src="tts.js"></script>
+</body>
+</html>
